@@ -11,10 +11,12 @@ export class BookService {
   constructor(private http: HttpClient) {}
 
   getBooks() {
+    console.log('calling getBooks');
     return this.http.get(`${this.env}/books`);
   }
-
+  
   addBook(book: Book) {
+    console.log('calling getBooks');
     return this.http.post(`${this.env}/books`, book);
   }
 }
